@@ -1,7 +1,7 @@
 {
   "metadata": {
     "name": "MTC",
-    "author": "vBook",
+    "author": "springpeachvinh",
     "version": 44,
     "source": "https://metruyencv.xyz",
     "regexp": "(www.)?(metruyenchu|mtccv|metruyencv).[a-z]+/truyen/[a-zA-Z0-9-]+/?$",
