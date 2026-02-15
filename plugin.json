@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "author": "springpeachvinh",
+    "description": "Một số plugin mở rộng cho vBook"
+  },
+  "data": [
+    {
+      "name": "Mê Truyện CV",
+      "author": "springpeachvinh",
+      "path": "https://raw.githubusercontent.com/SPRINGPEACHVINH/vbook-ext/main/metruyencv/plugin.zip",
+      "version": 1,
+      "source": "https://metruyencv.xyz",
+      "icon": "https://raw.githubusercontent.com/SPRINGPEACHVINH/vbook-ext/main/metruyencv/icon.png",
+      "description": "Đọc truyện trên trang metruyencv.xyz",
+      "type": "novel",
+      "locale": "vi_VN"
+    }
+  ]
+}
