@@ -11,7 +11,7 @@ function execute(url) {
     if (response.ok) {
         let doc = response.html();
         let genres = [];
-        doc.select("a[href*=danh-sach].inline-flex").forEach(e => {
+        doc.select(`a[href*=${BASE_URL}].inline-flex`).forEach(e => {
             genres.push({
                 title: e.text(),
                 input: e.attr("href"),
