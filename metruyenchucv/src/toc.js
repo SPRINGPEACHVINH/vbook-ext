@@ -1,22 +1,11 @@
 load("config.js");
 
-function execute(url) {
-    url = url.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n?]+)/img, BASE_URL);
-    let response = fetch(url);
-    if (!response.ok) return null;
-    let html = response.html();
-    // Lấy mangaId từ html (giả sử có dạng "id":123456)
-    let mangaIdMatch = /"id":(\d+)/.exec(html);
-    if (!mangaIdMatch) return null;
-    let mangaId = mangaIdMatch[1];
-    let slugMatch = url.match(/\/truyen\/([^\/]+)/);
-    if (!slugMatch) return null;
-    let slug = slugMatch[1];
-    let apiUrl = `${BASE_URL}/truyen/${slug}/ajax/chapters/`;
+function execute(url, id) {
+    apiUrl = url.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n?]+)/img, BASE_URL) + "/ajax/chapters/";
 
     let postBody = {
         action: "manga_get_chapters",
-        manga: mangaId
+        manga: id
     };
 
     let chapterRes = fetch(apiUrl, {
@@ -27,7 +16,7 @@ function execute(url) {
         },
         body: postBody
     });
-    if (!chapterRes.ok) return null;
+    if (!chapterRes.ok) return error("Không thể kết nối đến " + apiUrl);
     let doc = chapterRes.html();
     let chapters = [];
     doc.select("li.wp-manga-chapter a").forEach(e => {

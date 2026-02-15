@@ -6,7 +6,7 @@ function execute(url) {
 
     if (response.ok) {
         let doc = response.html();
-        let content = doc.select("[data-x-bind=ChapterContent]").first().html();
+        let content = doc.select(".text-left p").text();
         return Response.success(content);
     }
     return null;
