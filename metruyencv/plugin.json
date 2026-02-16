@@ -2,7 +2,7 @@
   "metadata": {
     "name": "Mê Truyện CV",
     "author": "springpeachvinh",
-    "version": 1,
+    "version": 2,
     "source": "https://metruyencv.xyz",
     "regexp": "(www.)?(metruyenchu|mtccv|metruyencv).[a-z]+/truyen/[a-zA-Z0-9-]+/?$",
     "description": "Đọc truyện trên trang Mê Truyện CV",
