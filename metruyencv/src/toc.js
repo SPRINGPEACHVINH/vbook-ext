@@ -26,5 +26,6 @@ function execute(url, id) {
             host: BASE_URL
         });
     });
+    chapters.reverse();
     return Response.success(chapters);
 }
