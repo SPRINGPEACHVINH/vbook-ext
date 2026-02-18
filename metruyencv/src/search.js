@@ -2,7 +2,6 @@ load("config.js");
 
 function execute(key, page) {
     if (!page) page = "1";
-    //let response = fetch(BASE_URL + "/page/" + page + "/?s=" + encodeURIComponent(key) + "&post_type=wp-manga");
     let response = fetch(BASE_URL + "/page/" + page + "/", {
         queries: {
             s: key,
